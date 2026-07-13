@@ -3,114 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ochtendauw Audiodienst | Audio Mixing & Productie</title>
+    <title>Ochtendauw Audiodienst | Indie Audio Mixing & Engineering Groningen</title>
     <style>
         :root {
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --accent-color: #00adb5;
-            --card-bg: #1e1e1e;
+            --bg-dark: #161616;       /* Basis achtergrond (studiosfeer) */
+            --banner-light: #f4f4f2;  /* Hoog contrast voor het zwarte logo */
+            --text-light: #e6e6e6;    /* Rustige, leesbare tekstkleur */
+            --text-muted: #a0a0a0;    /* Secundaire tekst */
+            --accent-ochtendauw: #d4a373; /* Warme, analoge amber/ochtendtint */
+            --card-bg: #1f1f1f;       /* Containers */
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.7;
             margin: 0;
             padding: 0;
         }
 
+        /* Hero Banner - ontworpen voor hoog contrast met een zwart logo */
         header {
+            background-color: var(--banner-light);
+            color: #111111;
             text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--card-bg);
+            padding: 4rem 1rem;
+            border-bottom: 4px solid var(--accent-ochtendauw);
         }
 
         .logo {
-            max-width: 200px;
+            max-width: 240px;
             height: auto;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+            margin: 0.5rem 0;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #555;
+            margin: 0 auto max-content;
+            font-style: italic;
         }
 
         nav {
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         nav a {
-            color: var(--text-color);
+            color: #111111;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            margin: 0 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
         }
 
         nav a:hover {
-            color: var(--accent-color);
+            border-color: var(--accent-ochtendauw);
         }
 
         main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 760px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
         }
 
         section {
-            margin-bottom: 3rem;
-            padding: 2rem;
+            margin-bottom: 4rem;
+            padding: 2.5rem;
             background-color: var(--card-bg);
-            border-radius: 8px;
+            border-radius: 6px;
+            border-left: 3px solid #333;
+        }
+
+        section#over-mij {
+            border-left-color: var(--accent-ochtendauw);
         }
 
         h2 {
-            color: var(--accent-color);
-            border-bottom: 1px solid #333;
-            padding-bottom: 0.5rem;
+            color: var(--text-light);
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.3px;
         }
 
-        .contact-info {
+        p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .services-list {
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-list {
             list-style: none;
             padding: 0;
+            margin: 2rem 0 0 0;
         }
 
-        .contact-info li {
-            margin-bottom: 1rem;
+        .contact-list li {
+            margin-bottom: 1.2rem;
             font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-list strong {
+            width: 100px;
+            color: var(--accent-ochtendauw);
+            display: inline-block;
+        }
+
+        .contact-list a {
+            color: var(--text-light);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--accent-ochtendauw);
+        }
+
+        .contact-list a:hover {
+            color: var(--accent-ochtendauw);
+        }
+
+        .location-tag {
+            display: inline-block;
+            background: #2a2a2a;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            color: #777;
+            padding: 4rem 2rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid #222;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <!-- Zorg ervoor dat het logobestand de naam logo.png heeft en in dezelfde map staat als dit HTML-bestand -->
+        <!-- De banner is licht van kleur, waardoor je zwarte logo direct opvalt -->
         <img src="logo.png" alt="Ochtendauw Audiodienst Logo" class="logo">
         <h1>Ochtendauw Audiodienst</h1>
+        <p>Lokale & onafhankelijke audioproductie vanuit Groningen</p>
         <nav>
-            <a href="#over-mij">Over Mij</a>
+            <a href="#over-mij">Over de studio</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
         <section id="over-mij">
-            <h2>Over Mij</h2>
-            <p>Welkom bij Ochtendauw Audiodienst. Ik lever professionele mixing, mastering en audio-nabewerking die zorgvuldig zijn afgestemd om helderheid, diepte en kracht in jouw geluid te brengen. Met een scherp oog voor balans en een optimale vertaling naar elk afspeelsysteem, help ik artiesten en producenten om een eindproduct van commerciële kwaliteit te realiseren.</p>
-            <p>Diensten omvatten onder andere multi-track mixing, vocale tuning, stereo mastering en audio-editing.</p>
+            <h2>Over de studio</h2>
+            <p>Ochtendauw Audiodienst is een onafhankelijke audiodienst gevestigd in Groningen. Ik werk nauw samen met lokale muzikanten, indie-bands en doe-het-zelf producenten om opnames de juiste analoge warmte, diepte en dynamiek te geven die moderne digitale producties vaak missen.</p>
+            <p>Geen steriele, klinische presets, maar een organische mix die past bij het karakter van jouw muziek. Of het nu gaat om een rauwe repetitie-opname of een volledige studiomix.</p>
+            <div class="services-list">
+                <strong>Focus:</strong> Analoog-karakter Mixing &bull; Mastering &bull; Audio-restauratie &bull; Stem-editing
+            </div>
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
-            <p>Neem voor boekingen, richtlijnen voor het aanleveren van stems of prijsopgaven contact op via de onderstaande gegevens:</p>
-            <ul class="contact-info">
-                <li><strong>E-mail:</strong> jouw.email@example.com</li>
-                <li><strong>Locatie:</strong> Groningen, Nederland (Wereldwijd beschikbaar)</li>
-                <li><strong>Instagram:</strong> @OchtendauwAudiodienst</li>
+            <h2>Contact & Boekingen</h2>
+            <p>Heb je een project dat gemixt moet worden, of wil je langskomen in Groningen om de mogelijkheden te bespreken? Stuur gerust een bericht.</p>
+            
+            <ul class="contact-list">
+                <li><strong>E-mail:</strong> <a href="mailto:octenddauwaudiodienst@gmail.com">octenddauwaudiodienst@gmail.com</a></li>
+                <li><strong>Instagram:</strong> <a href="https://instagram.com/ochtenddauw_audiodienst" target="_blank">@ochtenddauw_audiodienst</a></li>
+                <li><strong>Locatie:</strong> <span class="location-tag">Groningen, NL</span></li>
             </ul>
         </section>
     </main>
