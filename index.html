@@ -1,153 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Audio Mixing & Mastering</title>
     <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --primary-color: #24292e;
-            --secondary-color: #0366d6;
-            --accent-bg: #f6f8fa;
-            --border-color: #e1e4e8;
+        /* CSS Reset & Base Variables */
+        * {
+            box-sizing: border-box;
         }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
         }
-
+        
+        /* Navigation */
         header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
-
-        header p {
-            margin: 0.5rem 0 0 0;
-            font-size: 1.1rem;
-            opacity: 0.8;
-        }
-
-        nav {
-            background-color: var(--accent-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 0.5rem 1rem;
+            background-color: #000000;
+            padding: 20px;
             text-align: center;
             position: sticky;
             top: 0;
+            border-bottom: 1px solid #333;
             z-index: 100;
         }
-
+        .logo-container img {
+            max-width: 120px;
+            height: auto;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
         nav a {
-            color: var(--secondary-color);
+            color: #ffffff;
+            margin: 0 15px;
             text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 500;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: color 0.3s;
         }
-
         nav a:hover {
-            text-decoration: underline;
+            color: #888888;
         }
 
+        /* Layout */
         main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
         section {
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border-color);
+            padding: 80px 20px;
+            min-height: 60vh;
+            border-bottom: 1px solid #222;
         }
-
-        section:last-of-type {
-            border-bottom: none;
-        }
-
         h2 {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            border-bottom: 2px solid #555;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
         }
 
+        /* Pricing Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #111;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* Contact Form */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            color: #fff;
+            font-family: inherit;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        button:hover {
+            background-color: #666;
+        }
+
+        /* Footer */
         footer {
-            background-color: var(--accent-bg);
-            color: #586069;
             text-align: center;
-            padding: 1.5rem 1rem;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 4rem;
-        }
-
-        /* Placeholder styles for future expansion */
-        .placeholder {
-            background-color: #fffbdd;
-            border: 1px dashed #d9d0a0;
-            padding: 1.5rem;
-            border-radius: 6px;
-            margin-top: 1rem;
+            padding: 20px;
+            background-color: #000;
+            font-size: 0.9em;
+            color: #666;
         }
     </style>
 </head>
 <body>
 
+    <!-- Header / Navigation -->
     <header>
-        <h1>Welcome to My Website</h1>
-        <p>A clean, single-page template ready for deployment on GitHub Pages.</p>
+        <div class="logo-container">
+            <img src="Untitled_Artwork.jpg" alt="Mixing and Mastering Logo">
+        </div>
+        <nav>
+            <a href="#over-mij">Over Mij (About Me)</a>
+            <a href="#tarieven">Tarieven (Pricing)</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#section-1">Section One</a>
-        <a href="#section-2">Section Two</a>
-        <a href="#section-3">Section Three</a>
-    </nav>
-
     <main>
-        <section id="section-1">
-            <h2>Section One</h2>
-            <p>This is a placeholder paragraph for your first section content.</p>
-            <div class="placeholder">
-                <!-- SPACE RESERVED FOR FUTURE CONTENT ADDITION -->
-                <p><em>[Space reserved for future elements: text, images, or components]</em></p>
-            </div>
+        <!-- About Me Section -->
+        <section id="over-mij">
+            <h2>Over Mij</h2>
+            <p><strong>[Replace with English or Dutch text]</strong> I specialize in professional audio mixing and mastering. My goal is to elevate your music to industry standards with clarity, depth, and precision.</p>
+            
+            <p><em>Dutch Application Notes:</em></p>
+            <ul>
+                <li><strong>Muziek:</strong> Music</li>
+                <li><strong>Geluid:</strong> Sound / Audio</li>
+                <li><strong>Kwaliteit:</strong> Quality</li>
+                <li><strong>Mengen:</strong> Mixing</li>
+            </ul>
         </section>
 
-        <section id="section-2">
-            <h2>Section Two</h2>
-            <p>This is a placeholder paragraph for your second section content.</p>
-            <div class="placeholder">
-                <!-- SPACE RESERVED FOR FUTURE CONTENT ADDITION -->
-                <p><em>[Space reserved for future elements: text, images, or components]</em></p>
-            </div>
+        <!-- Price Guide Section -->
+        <section id="tarieven">
+            <h2>Tarieven</h2>
+            <p>Overzicht van de kosten (Overview of costs).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dienst (Service)</th>
+                        <th>Beschrijving (Description)</th>
+                        <th>Prijs (Price)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mastering</strong></td>
+                        <td>Polishing a final stereo mix for distribution.</td>
+                        <td>€50 / track</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stereo Mixing</strong></td>
+                        <td>Balancing multi-track stems (up to 30 tracks).</td>
+                        <td>€150 / track</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mix & Master Pakket</strong></td>
+                        <td>Full service package per track.</td>
+                        <td>€180 / track</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
-        <section id="section-3">
-            <h2>Section Three</h2>
-            <p>This is a placeholder paragraph for your third section content.</p>
-            <div class="placeholder">
-                <!-- SPACE RESERVED FOR FUTURE CONTENT ADDITION -->
-                <p><em>[Space reserved for future elements: text, images, or components]</em></p>
-            </div>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Gevestigd in (Located in): Groningen, Groningen, Netherlands.</p>
+            <p>Stuur een bericht (Send a message):</p>
+            
+            <!-- Note: Form functionality requires a backend or service like Formspree on GitHub Pages -->
+            <form action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST" class="contact-container">
+                <label>
+                    Naam (Name):
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    E-mail (Email):
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Bericht (Message):
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+                <button type="submit">Verzenden (Send)</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026. Built using HTML5 and CSS3.</p>
+        &copy; 2026 Audio Mixing & Mastering. Alle rechten voorbehouden (All rights reserved).
     </footer>
 
 </body>
