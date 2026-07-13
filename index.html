@@ -3,213 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Mixing & Mastering</title>
+    <title>Ochtendauw Audiodienst | Audio Mixing & Productie</title>
     <style>
-        /* CSS Reset & Base Variables */
-        * {
-            box-sizing: border-box;
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --accent-color: #00adb5;
+            --card-bg: #1e1e1e;
         }
+
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #0d0d0d;
-            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
-        
-        /* Navigation */
+
         header {
-            background-color: #000000;
-            padding: 20px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            border-bottom: 1px solid #333;
-            z-index: 100;
+            padding: 2rem 1rem;
+            background-color: var(--card-bg);
         }
-        .logo-container img {
-            max-width: 120px;
+
+        .logo {
+            max-width: 200px;
             height: auto;
-            display: block;
-            margin: 0 auto 15px auto;
+            margin-bottom: 1rem;
         }
+
+        nav {
+            margin-top: 1rem;
+        }
+
         nav a {
-            color: #ffffff;
-            margin: 0 15px;
+            color: var(--text-color);
             text-decoration: none;
+            margin: 0 15px;
             font-weight: bold;
-            letter-spacing: 1px;
-            transition: color 0.3s;
         }
+
         nav a:hover {
-            color: #888888;
+            color: var(--accent-color);
         }
 
-        /* Layout */
         main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
+
         section {
-            padding: 80px 20px;
-            min-height: 60vh;
-            border-bottom: 1px solid #222;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
         }
+
         h2 {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #ffffff;
-            border-bottom: 2px solid #555;
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 30px;
+            color: var(--accent-color);
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
         }
 
-        /* Pricing Table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #111;
-        }
-        th, td {
-            border: 1px solid #333;
-            padding: 15px;
-            text-align: left;
-        }
-        th {
-            background-color: #222;
-            color: #fff;
+        .contact-info {
+            list-style: none;
+            padding: 0;
         }
 
-        /* Contact Form */
-        .contact-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 500px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            background-color: #1a1a1a;
-            border: 1px solid #333;
-            color: #fff;
-            font-family: inherit;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #444;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        button:hover {
-            background-color: #666;
+        .contact-info li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
-        /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #000;
-            font-size: 0.9em;
-            color: #666;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #777;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navigation -->
     <header>
-        <div class="logo-container">
-            <img src="Untitled_Artwork.jpg" alt="Mixing and Mastering Logo">
-        </div>
+        <!-- Zorg ervoor dat het logobestand de naam logo.png heeft en in dezelfde map staat als dit HTML-bestand -->
+        <img src="logo.png" alt="Ochtendauw Audiodienst Logo" class="logo">
+        <h1>Ochtendauw Audiodienst</h1>
         <nav>
-            <a href="#over-mij">Over Mij (About Me)</a>
-            <a href="#tarieven">Tarieven (Pricing)</a>
+            <a href="#over-mij">Over Mij</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <!-- About Me Section -->
         <section id="over-mij">
             <h2>Over Mij</h2>
-            <p><strong>[Replace with English or Dutch text]</strong> I specialize in professional audio mixing and mastering. My goal is to elevate your music to industry standards with clarity, depth, and precision.</p>
-            
-            <p><em>Dutch Application Notes:</em></p>
-            <ul>
-                <li><strong>Muziek:</strong> Music</li>
-                <li><strong>Geluid:</strong> Sound / Audio</li>
-                <li><strong>Kwaliteit:</strong> Quality</li>
-                <li><strong>Mengen:</strong> Mixing</li>
-            </ul>
+            <p>Welkom bij Ochtendauw Audiodienst. Ik lever professionele mixing, mastering en audio-nabewerking die zorgvuldig zijn afgestemd om helderheid, diepte en kracht in jouw geluid te brengen. Met een scherp oog voor balans en een optimale vertaling naar elk afspeelsysteem, help ik artiesten en producenten om een eindproduct van commerciële kwaliteit te realiseren.</p>
+            <p>Diensten omvatten onder andere multi-track mixing, vocale tuning, stereo mastering en audio-editing.</p>
         </section>
 
-        <!-- Price Guide Section -->
-        <section id="tarieven">
-            <h2>Tarieven</h2>
-            <p>Overzicht van de kosten (Overview of costs).</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Dienst (Service)</th>
-                        <th>Beschrijving (Description)</th>
-                        <th>Prijs (Price)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Mastering</strong></td>
-                        <td>Polishing a final stereo mix for distribution.</td>
-                        <td>€50 / track</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Stereo Mixing</strong></td>
-                        <td>Balancing multi-track stems (up to 30 tracks).</td>
-                        <td>€150 / track</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Mix & Master Pakket</strong></td>
-                        <td>Full service package per track.</td>
-                        <td>€180 / track</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact</h2>
-            <p>Gevestigd in (Located in): Groningen, Groningen, Netherlands.</p>
-            <p>Stuur een bericht (Send a message):</p>
-            
-            <!-- Note: Form functionality requires a backend or service like Formspree on GitHub Pages -->
-            <form action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST" class="contact-container">
-                <label>
-                    Naam (Name):
-                    <input type="text" name="name" required>
-                </label>
-                <label>
-                    E-mail (Email):
-                    <input type="email" name="email" required>
-                </label>
-                <label>
-                    Bericht (Message):
-                    <textarea name="message" rows="5" required></textarea>
-                </label>
-                <button type="submit">Verzenden (Send)</button>
-            </form>
+            <p>Neem voor boekingen, richtlijnen voor het aanleveren van stems of prijsopgaven contact op via de onderstaande gegevens:</p>
+            <ul class="contact-info">
+                <li><strong>E-mail:</strong> jouw.email@example.com</li>
+                <li><strong>Locatie:</strong> Groningen, Nederland (Wereldwijd beschikbaar)</li>
+                <li><strong>Instagram:</strong> @OchtendauwAudiodienst</li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        &copy; 2026 Audio Mixing & Mastering. Alle rechten voorbehouden (All rights reserved).
+        <p>&copy; 2026 Ochtendauw Audiodienst. Alle rechten voorbehouden.</p>
     </footer>
 
 </body>
