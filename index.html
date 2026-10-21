@@ -41,6 +41,10 @@ a{transition:color .6s ease}
 .row:hover{padding-left:14px}
 .work .wt{transition:letter-spacing .9s cubic-bezier(.2,.7,.2,1)}
 .work:hover .wt{letter-spacing:.16em}
+.w-title{display:block;font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(28px,4vw,48px);letter-spacing:.08em;line-height:1.2}
+.w-sub{display:block;margin:8px 0 20px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a;line-height:1.7}
+.w-body{display:block;margin:0 0 24px;font-size:16px;color:#c8c8c8}
+.w-body:last-child{margin-bottom:0}
 .go{display:inline-block;border:0;padding:14px 0;font:400 12px 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#f2f2f2;transition:background .6s ease,color .6s ease}
 .go .ar{display:inline-block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .work:hover .go .ar{transform:translate(3px,-3px)}
@@ -90,22 +94,10 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 <img src="maulkorb.jpg" alt="Maulkorb EP cover art" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
 </span>
 <span style="display:block;flex:1 1 240px">
-<span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">Maulkorb</span>
-<span style="display:block;margin:6px 0 28px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">EP, recorded by Ochtenddauw</span>
+<span class="wt w-title">Maulkorb</span>
+<span class="w-sub">EP, recorded by Ochtenddauw</span>
+<span class="w-body">A true product of the Groningen punk scene. Punchy, loud, and in your face.</span>
 <span class="go">Listen on Bandcamp <span class="ar">&#8599;</span></span>
-</span>
-</a>
-
-<!-- THE RING. Image is ring.png (same folder as this file). Link goes to the demo page. -->
-<a class="work" href="https://ochtenddauwaudiodienst.github.io/Demo-Website/" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;align-items:center;gap:32px;border-bottom:1px solid #2a2a2a;padding:28px 0">
-<span class="cover" style="display:block;position:relative;flex:0 0 min(260px,100%);aspect-ratio:1/1;border:1px solid #2a2a2a;background:#111;overflow:hidden">
-<span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#4a4a4a">Ring image</span>
-<img src="ring.png" alt="Logo of the specially designed ring" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:18px;box-sizing:border-box;display:block">
-</span>
-<span style="display:block;flex:1 1 240px">
-<span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">The Ring</span>
-<span style="display:block;margin:6px 0 28px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a;line-height:1.7">Mobile-focused web demo with press-and-hold buttons and audio/visual elements, scanned from a QR code to add value after purchase</span>
-<span class="go">View demo <span class="ar">&#8599;</span></span>
 </span>
 </a>
 
@@ -116,11 +108,25 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 <img src="live-sound.jpg" alt="Ochtenddauw running live sound at a gig" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
 </span>
 <span style="display:block;flex:1 1 240px">
-<span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">Live sound</span>
-<span style="display:block;margin:6px 0 20px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a;line-height:1.7">Sound technician, with my own X32</span>
-<span style="display:block;color:#c8c8c8">I've run sound at a number of gigs. I bring the Behringer X32 and the microphones, so your band sounds right on the night, not just on the record.</span>
+<span class="wt w-title">Live sound</span>
+<span class="w-sub">Sound technician, with my own X32</span>
+<span class="w-body">I've run sound at a number of gigs. I bring the Behringer X32 and the microphones, so your band sounds right on the night, not just on the record.</span>
 </span>
 </div>
+
+<!-- THE RING. Image is ring.png (same folder as this file). Link goes to the demo page. -->
+<a class="work" href="https://ochtenddauwaudiodienst.github.io/Demo-Website/" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;align-items:center;gap:32px;border-bottom:1px solid #2a2a2a;padding:28px 0">
+<span class="cover" style="display:block;position:relative;flex:0 0 min(260px,100%);aspect-ratio:1/1;border:1px solid #2a2a2a;background:#111;overflow:hidden">
+<span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#4a4a4a">Ring image</span>
+<img src="ring.png" alt="Logo of the specially designed ring" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:18px;box-sizing:border-box;display:block">
+</span>
+<span style="display:block;flex:1 1 240px">
+<span class="wt w-title">The Ring</span>
+<span class="w-sub">Web demo, scanned from a QR code</span>
+<span class="w-body">A mobile-focused web demo with press-and-hold buttons and audio/visual elements, reached by scanning a QR code to add value after purchase.</span>
+<span class="go">View demo <span class="ar">&#8599;</span></span>
+</span>
+</a>
 
 </div>
 </div>
@@ -139,8 +145,8 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 <div id="rig" style="border-top:1px solid #2a2a2a;padding:96px 0;display:flex;flex-wrap:wrap;gap:48px">
 <div class="rv" style="flex:1 1 220px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Rig</div>
 <div class="rv" style="flex:3 1 420px;max-width:860px">
-<div style="font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(24px,3vw,36px);line-height:1.5">A studio on wheels. One all-in-one setup built around the Behringer X32, with a serious array of Sennheiser and Shure microphones.</div>
-<p style="margin:32px 0 0;color:#c8c8c8">It comes to your rehearsal room, your venue or your living room. No studio rent, no travelling with your amps.</p>
+<div style="font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(24px,3vw,36px);line-height:1.5">A studio on wheels. One all-in-one setup built around the Behringer X32 and high quality Mics.</div>
+<p style="margin:32px 0 0;color:#c8c8c8">Whether the rehersal room or the gig, the flexability of recordings are endless.</p>
 </div>
 </div>
 
@@ -150,10 +156,7 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 <div style="font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(24px,3vw,36px);line-height:1.5;margin-bottom:48px">Tell me about your band and what you want to make.</div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px 40px">
 <div><label class="lbl" for="f-name">Name</label><input class="fld" id="f-name" type="text" autocomplete="name"></div>
-<div><label class="lbl" for="f-band">Band</label><input class="fld" id="f-band" type="text"></div>
 <div><label class="lbl" for="f-mail">Your email</label><input class="fld" id="f-mail" type="email" autocomplete="email"></div>
-<div><label class="lbl" for="f-kind">What</label>
-<select class="fld" id="f-kind"><option>Single</option><option>EP</option><option>Album</option><option>Mixing / mastering only</option><option>Not sure yet</option></select></div>
 </div>
 <div style="margin-top:28px"><label class="lbl" for="f-msg">Message</label><textarea class="fld" id="f-msg" rows="4" style="resize:vertical"></textarea></div>
 <div style="margin-top:40px"><a class="send" id="send" href="mailto:octenddauwaudiodienst@gmail.com">Send request</a></div>
@@ -168,8 +171,7 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 <span>Groningen, NL</span>
 </div>
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:28px;font-size:12px;letter-spacing:.12em;text-transform:uppercase">
-<span>Ochtenddauw Audio Dienst &middot; KvK 42003086 &middot; btw-id [NL000000000B00]</span>
-<a href="https://claude.ai/artifact/9ahyWGTHTbe74aLuSmpiay" target="_blank" rel="noopener">Terms &amp; conditions</a>
+<span>Ochtenddauw Audio Dienst &middot; KvK 42003086 &middot; btw-id [NL005425897B98]</span>
 </div>
 </div>
 
@@ -180,15 +182,13 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 (function () {
   var g = function (id) { return document.getElementById(id); };
   function update() {
-    var name = g('f-name').value, band = g('f-band').value, mail = g('f-mail').value,
-        kind = g('f-kind').value, msg = g('f-msg').value;
-    var body = 'Name: ' + name + '\nBand: ' + band + '\nReply to: ' + mail + '\nProject: ' + kind + '\n\n' + msg;
+    var name = g('f-name').value, mail = g('f-mail').value, msg = g('f-msg').value;
+    var body = 'Name: ' + name + '\nReply to: ' + mail + '\n\n' + msg;
     g('send').href = 'mailto:octenddauwaudiodienst@gmail.com?subject=' +
-      encodeURIComponent('Booking request: ' + (band || name || 'new project')) +
+      encodeURIComponent('Booking request: ' + (name || 'new project')) +
       '&body=' + encodeURIComponent(body);
   }
-  ['f-name', 'f-band', 'f-mail', 'f-msg'].forEach(function (id) { g(id).addEventListener('input', update); });
-  g('f-kind').addEventListener('change', update);
+  ['f-name', 'f-mail', 'f-msg'].forEach(function (id) { g(id).addEventListener('input', update); });
   update();
 })();
 </script>
