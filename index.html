@@ -10,6 +10,48 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&family=IBM+Plex+Mono:wght@300;400&display=swap">
+<style>html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{margin:0;background:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+a{color:#f2f2f2;text-decoration:none}
+a:hover{color:#f2f2f2}
+.h-nav a:hover{text-decoration:underline;text-underline-offset:8px}
+.fld{display:block;width:100%;box-sizing:border-box;background:transparent;border:0;border-bottom:1px solid #4a4a4a;color:#f2f2f2;font:300 16px 'IBM Plex Mono',monospace;padding:14px 0;border-radius:0;outline:none;min-height:44px}
+.fld:focus{border-bottom-color:#f2f2f2}
+.fld option{background:#0a0a0a;color:#f2f2f2}
+.lbl{display:block;font:300 12px 'IBM Plex Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a;margin-bottom:2px}
+.send{display:inline-block;border:1px solid #f2f2f2;padding:16px 36px;font:400 13px 'IBM Plex Mono',monospace;letter-spacing:.25em;text-transform:uppercase;color:#f2f2f2}
+.send:hover{background:rgba(242,242,242,.12)}
+a{transition:color .6s ease}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes track{from{opacity:0;letter-spacing:.55em}to{opacity:1;letter-spacing:.32em}}
+@keyframes drift{0%,100%{translate:0 0}50%{translate:0 -9px}}
+/* Logo: dark drawing is inverted to light; screen blend hides any dark/white box around it */
+.logo{filter:invert(1) contrast(1.3);mix-blend-mode:screen;animation:fade 2.2s ease both,drift 10s ease-in-out 2.2s infinite}
+.h-word{animation:track 2.6s cubic-bezier(.2,.7,.2,1) .3s both}
+.h-sub{animation:rise 1.8s cubic-bezier(.2,.7,.2,1) .9s both}
+.h-line{animation:rise 1.8s cubic-bezier(.2,.7,.2,1) 1.3s both}
+.h-nav{animation:fade 2s ease 1.8s both}
+@supports (animation-timeline:view()){.rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 60%}}
+.row{transition:padding-left .7s cubic-bezier(.2,.7,.2,1),color .7s ease}
+.row:hover{padding-left:14px}
+.work .wt{transition:letter-spacing .9s cubic-bezier(.2,.7,.2,1)}
+.work:hover .wt{letter-spacing:.16em}
+.go{display:inline-block;border:1px solid #f2f2f2;padding:14px 28px;font:400 12px 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#f2f2f2;transition:background .6s ease,color .6s ease}
+.go .ar{display:inline-block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.work:hover .go{background:rgba(242,242,242,.12)}
+.work:hover .go .ar{transform:translate(3px,-3px)}
+.work:hover{color:#f2f2f2}
+.cover img{filter:grayscale(1);transition:filter .9s ease}
+.work:hover .cover img{filter:none}
+.fld{transition:border-bottom-color .6s ease}
+.send{transition:background .6s ease,color .6s ease,letter-spacing .6s ease}
+.send:hover{letter-spacing:.32em}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
 </head>
 <body>
 
@@ -31,14 +73,14 @@
 
 <div style="border-top:1px solid #2a2a2a;padding:96px 0;display:flex;flex-wrap:wrap;gap:48px">
 <div class="rv" style="flex:1 1 220px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Over</div>
-<div class="rv" style="flex:3 1 420px;max-width:720px;font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(24px,3vw,36px);line-height:1.5">
+<div class="rv" style="flex:3 1 420px;max-width:860px;font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(24px,3vw,36px);line-height:1.5">
 I'm an enthusiast first. I love to be a part of such amazing projects and communities. I like to meet bands where they are and offer high quality recordings.
 </div>
 </div>
 
 <div id="werk" style="border-top:1px solid #2a2a2a;padding:96px 0;display:flex;flex-wrap:wrap;gap:48px">
 <div class="rv" style="flex:1 1 220px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Werk</div>
-<div class="rv" style="flex:3 1 420px;max-width:720px">
+<div class="rv" style="flex:3 1 420px;max-width:860px">
 
 <!-- MAULKORB. Album art: save the cover as "maulkorb.jpg" in the same folder as this file. -->
 <a class="work" href="https://maulkorbpunx.bandcamp.com/album/maulkorb-3" style="display:flex;flex-wrap:wrap;align-items:center;gap:32px;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;padding:28px 0">
@@ -47,7 +89,7 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 <img src="maulkorb.jpg" alt="Maulkorb EP cover art" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
 </span>
 <span style="display:block;flex:1 1 240px">
-<span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">Maulkorb</span>
+<span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">Maulkorb</span>
 <span style="display:block;margin:6px 0 28px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">EP, recorded by Ochtenddauw</span>
 <span class="go">Listen on Bandcamp <span class="ar">&#8599;</span></span>
 </span>
@@ -60,7 +102,7 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 <img src="ring.png" alt="Logo of the specially designed ring" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:18px;box-sizing:border-box;display:block">
 </span>
 <span style="display:block;flex:1 1 240px">
-<span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">The Ring</span>
+<span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">The Ring</span>
 <span style="display:block;margin:6px 0 28px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a;line-height:1.7">Mobile-focused web demo with press-and-hold buttons and audio/visual elements, scanned from a QR code to add value after purchase</span>
 <span class="go">View demo <span class="ar">&#8599;</span></span>
 </span>
@@ -73,7 +115,7 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 <img src="live-sound.jpg" alt="Ochtenddauw running live sound at a gig" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
 </span>
 <span style="display:block;flex:1 1 240px">
-<span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">Live sound</span>
+<span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">Live sound</span>
 <span style="display:block;margin:6px 0 20px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a;line-height:1.7">Sound technician, with my own X32</span>
 <span style="display:block;color:#c8c8c8">I've run sound at a number of gigs. I bring the Behringer X32 and the microphones, so your band sounds right on the night, not just on the record.</span>
 </span>
@@ -84,27 +126,27 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 
 <div id="diensten" style="border-top:1px solid #2a2a2a;padding:96px 0;display:flex;flex-wrap:wrap;gap:48px">
 <div class="rv" style="flex:1 1 220px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Diensten</div>
-<div class="rv" style="flex:3 1 420px;max-width:720px">
+<div class="rv" style="flex:3 1 420px;max-width:860px">
 <p style="margin:0 0 40px;color:#c8c8c8">Recording, mixing and mastering, done in one place, by one person.</p>
-<div class="row" style="display:flex;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid #2a2a2a;font-family:'Jost',sans-serif;font-weight:200;font-size:28px"><span>Single</span><span>from €150</span></div>
-<div class="row" style="display:flex;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid #2a2a2a;font-family:'Jost',sans-serif;font-weight:200;font-size:28px"><span>EP</span><span>from €200</span></div>
-<div class="row" style="display:flex;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;font-family:'Jost',sans-serif;font-weight:200;font-size:28px"><span>Album</span><span>from €250</span></div>
+<div class="row" style="display:flex;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid #2a2a2a;font-family:'Jost',sans-serif;font-weight:300;font-size:28px"><span>Single</span><span>from €150</span></div>
+<div class="row" style="display:flex;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid #2a2a2a;font-family:'Jost',sans-serif;font-weight:300;font-size:28px"><span>EP</span><span>from €200</span></div>
+<div class="row" style="display:flex;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;font-family:'Jost',sans-serif;font-weight:300;font-size:28px"><span>Album</span><span>from €250</span></div>
 <p style="margin:24px 0 0;font-size:13px;color:#9a9a9a">All rates include btw. Rates are a starting point; every project is agreed in a conversation first, and you get a written quote before anything starts.</p>
 </div>
 </div>
 
 <div id="rig" style="border-top:1px solid #2a2a2a;padding:96px 0;display:flex;flex-wrap:wrap;gap:48px">
 <div class="rv" style="flex:1 1 220px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Rig</div>
-<div class="rv" style="flex:3 1 420px;max-width:720px">
-<div style="font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(24px,3vw,36px);line-height:1.5">A studio on wheels. One all-in-one setup built around the Behringer X32, with a serious array of Sennheiser and Shure microphones.</div>
+<div class="rv" style="flex:3 1 420px;max-width:860px">
+<div style="font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(24px,3vw,36px);line-height:1.5">A studio on wheels. One all-in-one setup built around the Behringer X32, with a serious array of Sennheiser and Shure microphones.</div>
 <p style="margin:32px 0 0;color:#c8c8c8">It comes to your rehearsal room, your venue or your living room. No studio rent, no travelling with your amps.</p>
 </div>
 </div>
 
 <div id="boeken" style="border-top:1px solid #2a2a2a;padding:96px 0;display:flex;flex-wrap:wrap;gap:48px">
 <div class="rv" style="flex:1 1 220px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Boeken</div>
-<div class="rv" style="flex:3 1 420px;max-width:720px">
-<div style="font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(24px,3vw,36px);line-height:1.5;margin-bottom:48px">Tell me about your band and what you want to make.</div>
+<div class="rv" style="flex:3 1 420px;max-width:860px">
+<div style="font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(24px,3vw,36px);line-height:1.5;margin-bottom:48px">Tell me about your band and what you want to make.</div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px 40px">
 <div><label class="lbl" for="f-name">Name</label><input class="fld" id="f-name" type="text" autocomplete="name"></div>
 <div><label class="lbl" for="f-band">Band</label><input class="fld" id="f-band" type="text"></div>
