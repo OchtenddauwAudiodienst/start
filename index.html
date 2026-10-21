@@ -13,9 +13,11 @@
 <style>html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-body{margin:0;background:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+html{background:#0a0a0a;color-scheme:dark}
+body{margin:0;padding:0;min-height:100vh;background:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
 a{color:#f2f2f2;text-decoration:none}
-a:hover{color:#f2f2f2}
+a,a:visited,a:hover,a:active,a:focus{color:#f2f2f2}
+a:focus:not(:focus-visible){outline:none}
 .h-nav a:hover{text-decoration:underline;text-underline-offset:8px}
 .fld{display:block;width:100%;box-sizing:border-box;background:transparent;border:0;border-bottom:1px solid #4a4a4a;color:#f2f2f2;font:300 16px 'IBM Plex Mono',monospace;padding:14px 0;border-radius:0;outline:none;min-height:44px}
 .fld:focus{border-bottom-color:#f2f2f2}
@@ -39,9 +41,8 @@ a{transition:color .6s ease}
 .row:hover{padding-left:14px}
 .work .wt{transition:letter-spacing .9s cubic-bezier(.2,.7,.2,1)}
 .work:hover .wt{letter-spacing:.16em}
-.go{display:inline-block;border:1px solid #f2f2f2;padding:14px 28px;font:400 12px 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#f2f2f2;transition:background .6s ease,color .6s ease}
+.go{display:inline-block;border:0;padding:14px 0;font:400 12px 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;color:#f2f2f2;transition:background .6s ease,color .6s ease}
 .go .ar{display:inline-block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.work:hover .go{background:rgba(242,242,242,.12)}
 .work:hover .go .ar{transform:translate(3px,-3px)}
 .work:hover{color:#f2f2f2}
 .cover img{filter:grayscale(1);transition:filter .9s ease}
@@ -78,9 +79,9 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 </div>
 </div>
 
-<div id="werk" style="border-top:1px solid #2a2a2a;padding:96px 0;display:flex;flex-wrap:wrap;gap:48px">
-<div class="rv" style="flex:1 1 220px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Werk</div>
-<div class="rv" style="flex:3 1 420px;max-width:860px">
+<div id="werk" style="border-top:1px solid #2a2a2a;padding:96px 0;display:flex;flex-wrap:wrap;gap:32px">
+<div class="rv" style="flex:0 0 100px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Werk</div>
+<div class="rv" style="flex:1 1 420px;max-width:860px">
 
 <!-- MAULKORB. Album art: save the cover as "maulkorb.jpg" in the same folder as this file. -->
 <a class="work" href="https://maulkorbpunx.bandcamp.com/album/maulkorb-3" style="display:flex;flex-wrap:wrap;align-items:center;gap:32px;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;padding:28px 0">
