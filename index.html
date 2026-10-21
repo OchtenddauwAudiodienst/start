@@ -27,7 +27,8 @@ a{transition:color .6s ease}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes track{from{opacity:0;letter-spacing:.55em}to{opacity:1;letter-spacing:.32em}}
 @keyframes drift{0%,100%{translate:0 0}50%{translate:0 -9px}}
-.logo{animation:fade 2.2s ease both,drift 10s ease-in-out 2.2s infinite}
+/* Logo: the SVG filter #knockout turns the paper background transparent and the drawing off-white */
+.logo{filter:url(#knockout);animation:fade 2.2s ease both,drift 10s ease-in-out 2.2s infinite}
 .h-word{animation:track 2.6s cubic-bezier(.2,.7,.2,1) .3s both}
 .h-sub{animation:rise 1.8s cubic-bezier(.2,.7,.2,1) .9s both}
 .h-line{animation:rise 1.8s cubic-bezier(.2,.7,.2,1) 1.3s both}
@@ -42,6 +43,8 @@ a{transition:color .6s ease}
 .work:hover .go{background:#f2f2f2;color:#0a0a0a}
 .work:hover .go .ar{transform:translate(3px,-3px)}
 .work:hover{color:#f2f2f2}
+.cover img{filter:grayscale(1);transition:filter .9s ease}
+.work:hover .cover img{filter:none}
 .fld{transition:border-bottom-color .6s ease}
 .send{transition:background .6s ease,color .6s ease,letter-spacing .6s ease}
 .send:hover{letter-spacing:.32em}
@@ -51,17 +54,27 @@ a{transition:color .6s ease}
 </head>
 <body>
 
+<!-- Invisible SVG filter used by the logo: luminance becomes opacity, so light paper disappears -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="knockout" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0 0 0 0 0.95
+                                         0 0 0 0 0.95
+                                         0 0 0 0 0.95
+                                         -0.51 -1.72 -0.17 0 2.0"/>
+  </filter>
+</svg>
+
 <div style="background:#0a0a0a;color:#f2f2f2;font-family:'IBM Plex Mono',monospace;font-weight:300;font-size:16px;line-height:1.8">
 
 <div style="max-width:1200px;margin:0 auto;padding:0 32px;box-sizing:border-box">
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:32px 0;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">
 <span>Groningen, NL</span>
-<span class="h-nav" style="display:flex;gap:28px;flex-wrap:wrap"><a href="#diensten">Diensten</a><a href="#rig">Rig</a><a href="#werk">Werk</a><a href="#boeken">Boeken</a></span>
+<span class="h-nav" style="display:flex;gap:28px;flex-wrap:wrap"><a href="#werk">Werk</a><a href="#diensten">Diensten</a><a href="#rig">Rig</a><a href="#boeken">Boeken</a></span>
 </div>
 
 <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:72px 0 120px">
-<img class="logo" src="logo.jpg" alt="Ochtenddauw Audiodienst logo: a cargo bike carrying an amplifier, a heron standing on top" style="width:min(560px,100%);height:auto;filter:invert(1);mix-blend-mode:screen">
+<img class="logo" src="logo.jpg" alt="Ochtenddauw Audiodienst logo: a cargo bike carrying an amplifier, a heron standing on top" style="width:min(560px,100%);height:auto">
 <h1 class="h-word" style="margin:56px 0 0;font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(34px,6.4vw,84px);letter-spacing:.32em;text-transform:uppercase;line-height:1.15">Ochtenddauw</h1>
 <div class="h-sub" style="margin-top:12px;font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(14px,1.8vw,20px);letter-spacing:.7em;text-transform:uppercase;color:#9a9a9a;padding-left:.7em">Audiodienst</div>
 <p class="h-line" style="margin:56px 0 0;max-width:520px;color:#c8c8c8">Recording, mixing and mastering for small bands and communities. A studio on wheels.</p>
@@ -71,6 +84,33 @@ a{transition:color .6s ease}
 <div class="rv" style="flex:1 1 220px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Over</div>
 <div class="rv" style="flex:3 1 420px;max-width:720px;font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(24px,3vw,36px);line-height:1.5">
 I'm an enthusiast first. I love to be a part of such amazing projects and communities. I like to meet bands where they are and offer high quality recordings.
+</div>
+</div>
+
+<div id="werk" style="border-top:1px solid #2a2a2a;padding:96px 0;display:flex;flex-wrap:wrap;gap:48px">
+<div class="rv" style="flex:1 1 220px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Werk</div>
+<div class="rv" style="flex:3 1 420px;max-width:720px">
+
+<!-- MAULKORB. Album art: save the cover as "maulkorb.jpg" in the same folder as this file. -->
+<a class="work" href="https://maulkorbpunx.bandcamp.com/album/maulkorb-3" style="display:flex;flex-wrap:wrap;align-items:center;gap:32px;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;padding:28px 0">
+<span class="cover" style="display:block;position:relative;flex:0 0 min(260px,100%);aspect-ratio:1/1;border:1px solid #2a2a2a;background:#111;overflow:hidden">
+<span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#4a4a4a">Album art</span>
+<img src="maulkorb.jpg" alt="Maulkorb EP cover art" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+</span>
+<span style="display:block;flex:1 1 240px">
+<span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">Maulkorb</span>
+<span style="display:block;margin:6px 0 28px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">EP, recorded by Ochtenddauw</span>
+<span class="go">Listen on Bandcamp <span class="ar">&#8599;</span></span>
+</span>
+</a>
+
+<!-- RING DEMO. Replace REPLACE-WITH-DEMO-URL with the address of the demo page (the one the QR code points to). Get the client's OK first. -->
+<a class="work" href="https://ochtenddauwaudiodienst.github.io/Demo-Website/" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #2a2a2a;padding:28px 0">
+<span style="display:block"><span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">The Ring</span>
+<span style="display:block;margin-top:6px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Mobile-focused Web demo which specialized in press and hold buttons with Audio/Visual elements, scanned from a QR code to add value after purchase</span></span>
+<span class="go">View demo <span class="ar">&#8599;</span></span>
+</a>
+
 </div>
 </div>
 
@@ -90,17 +130,6 @@ I'm an enthusiast first. I love to be a part of such amazing projects and commun
 <div class="rv" style="flex:3 1 420px;max-width:720px">
 <div style="font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(24px,3vw,36px);line-height:1.5">A studio on wheels. One all-in-one setup built around the Behringer X32, with a serious array of Sennheiser and Shure microphones.</div>
 <p style="margin:32px 0 0;color:#c8c8c8">It comes to your rehearsal room, your venue or your living room. No studio rent, no travelling with your amps.</p>
-</div>
-</div>
-
-<div id="werk" style="border-top:1px solid #2a2a2a;padding:96px 0;display:flex;flex-wrap:wrap;gap:48px">
-<div class="rv" style="flex:1 1 220px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">Werk</div>
-<div class="rv" style="flex:3 1 420px;max-width:720px">
-<a class="work" href="https://maulkorbpunx.bandcamp.com/album/maulkorb-3" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;padding:28px 0">
-<span style="display:block"><span class="wt" style="display:block;font-family:'Jost',sans-serif;font-weight:200;font-size:clamp(28px,4vw,48px);letter-spacing:.08em">Maulkorb</span>
-<span style="display:block;margin-top:6px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a">EP, recorded by Ochtenddauw</span></span>
-<span class="go">Listen on Bandcamp <span class="ar">&#8599;</span></span>
-</a>
 </div>
 </div>
 
